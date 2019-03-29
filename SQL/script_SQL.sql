@@ -40,6 +40,7 @@ CREATE TABLE IF NOT EXISTS `edu_db`.`note` (
   `date` DATE NULL,
   `tags` VARCHAR(255) NULL,
   `user_user_id` INT NOT NULL,
+  `ref` VARCHAR(50) NOT NULL,
   PRIMARY KEY (`note_id`, `user_user_id`),
   INDEX `fk_note_user_idx` (`user_user_id` ASC),
   CONSTRAINT `fk_note_user`
@@ -61,6 +62,6 @@ INSERT INTO `user` (`user_id`, `name`, `surname`, `login`, `password`, `pasecode
 -- Add new 'note`
 -- ------------------------------------------------------
 
-INSERT INTO `edu_db`.`note` (`note_id`, `title`, `date`, `tags`, `user_user_id`) VALUES (1, 'Matematyka', '2019-03-29', 'matematyka, fdgdfg', 1);
-INSERT INTO `edu_db`.`note` (`note_id`, `title`, `date`, `tags`, `user_user_id`) VALUES (2, 'Matematyka', '2019-03-29', 'matematyka, fdgdfg', 2);
-INSERT INTO `edu_db`.`note` (`note_id`, `title`, `date`, `tags`, `user_user_id`) VALUES (3, 'Matematyka', '2019-03-29', 'matematyka, fdgdfg', 1);
+INSERT INTO `edu_db`.`note` (`note_id`, `title`, `date`, `tags`, `user_user_id`, `ref`) VALUES (1, 'Matematyka', '2019-03-29', 'matematyka, macierze', 1, 'jdk3s2a');
+INSERT INTO `edu_db`.`note` (`note_id`, `title`, `date`, `tags`, `user_user_id`, `ref`) VALUES (2, 'Historia', '2019-03-29', 'historia, kraj', 2, 'fdgtg44');
+INSERT INTO `edu_db`.`note` (`note_id`, `title`, `date`, `tags`, `user_user_id`, `ref`) VALUES (3, 'Wzory z fizyki', '2019-03-29', 'fizyka, fale elektromagnetyczne', 1, 'sdf2jnf');
