@@ -22,6 +22,7 @@
         </div>
         <div class="header-button-wrap">
             <div class="header-button"><i class="fa fa-cog" aria-hidden="true"></i></div>
+            <a href="logout.php"><div class="header-button"><i class="fa fa-sign-out" aria-hidden="true"></i></div></a>
             <div class="header-splitter"></div>
             <div class="header-avatar" style="background-image: url(http://res.frozent.pl/sdadsd.jpg)"></div>
         </div>
