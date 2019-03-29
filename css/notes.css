@@ -8,7 +8,7 @@
     border-radius: 5px;
     position:relative;
     margin: 20px 10px 10px 20px;
-    background-image:url(../img/notes.jpg);
+    background-image:url(../data/notes.jpg);
     background-size:cover;
   }
   .note-title {
