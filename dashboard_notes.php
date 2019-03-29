@@ -21,18 +21,27 @@
             <input type="text" placeholder="Search..." class="header-search-input">
         </div>
         <div class="header-button-wrap">
-            <div class="header-button"><i class="fa fa-file-text-o" aria-hidden="true"></i></div>
-            <div class="header-button"><i class="fa fa-gavel" aria-hidden="true"></i></div>
             <div class="header-button"><i class="fa fa-cog" aria-hidden="true"></i></div>
+            <div class="header-splitter"></div>
+            <div class="header-avatar" style="background-image: url(http://res.frozent.pl/sdadsd.jpg)"></div>
         </div>
     </div>
     
     <!-- Left Header -->
     <div class="leader">
         <div class="leader-button-wrap">
-            <div class="leader-button leader-button-checked"><i class="fa fa-file-text-o" aria-hidden="true"></i></div>
-            <div class="leader-button"><i class="fa fa-gavel" aria-hidden="true"></i></div>
-            <div class="leader-button"><i class="fa fa-cog" aria-hidden="true"></i></div>
+            <a href="dashboard.php">
+                <div class="leader-button leader-button-checked">
+                    <div class="leader-label"><div class="leader-label-arrleft"></div><div class="leader-label-arrright"></div>DASHBOARD</div>
+                    <i class="fa fa-user-o" aria-hidden="true"></i>
+                </div>
+            </a>
+            <a href="notes.php">
+                <div class="leader-button">
+                    <div class="leader-label"><div class="leader-label-arrleft"></div><div class="leader-label-arrright"></div>NOTES</div>
+                    <i class="fa fa-files-o" aria-hidden="true"></i>
+                </div>
+            </a>
         </div>
     </div>
     
