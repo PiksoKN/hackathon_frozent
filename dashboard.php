@@ -16,10 +16,14 @@
     <!-- Header -->
     <div class="header">
         <div class="header-search">
-            <i class='fa fa-search' aria-hidden='true' class="header-search-icon"></i>
+            <i class='fa fa-search header-search-icon' aria-hidden='true'></i>
             <input type="text" placeholder="Search..." class="header-search-input">
         </div>
-        
+        <div class="header-button-wrap">
+            <div class="header-button"><i class="fa fa-file-text-o" aria-hidden="true"></i></div>
+            <div class="header-button"><i class="fa fa-gavel" aria-hidden="true"></i></div>
+            <div class="header-button"><i class="fa fa-cog" aria-hidden="true"></i></div>
+        </div>
     </div>
     
     <!-- Left Header -->

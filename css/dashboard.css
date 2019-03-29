@@ -11,6 +11,9 @@ a     { text-decoration: none; }
 .header-search        { position: relative; margin-top: 25px; margin-left: 25px; }
 .header-search-input  { background: rgba(183, 183, 183, 0.5); height: 20px; margin-left: 5px; padding: 5px 10px; border: 0px; border-radius: 15px; }
 .header-search-icon   { position: relative; color: #595959; }
+.header-button-wrap   { position: absolute; top: 15px; right: 15px; display: flex; align-content: flex-end; font-size: 20px; line-height: 30px; }
+.header-button        { padding: 10px; margin: 0 3px; color: #595959; transition: 0.2s color; cursor: pointer; }
+.header-button:hover  { color: #75afc6 }
 
 /* Leader */
 .leader       { position: fixed; top: 80px; left: 0px; height: calc(100% - 80px); background: #dedede80; width: 80px; }
