@@ -20,11 +20,12 @@ USE edu_db ;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `edu_db`.`user` (
   `user_id` INT NOT NULL,
-  `name` VARCHAR(50) NULL,
-  `surname` VARCHAR(50) NULL,
-  `login` VARCHAR(50) NULL,
-  `password` VARCHAR(45) NULL,
-  `pasecode` VARCHAR(255) NULL,
+  `name` VARCHAR(50) NOT NULL,
+  `surname` VARCHAR(50) NOT NULL,
+  `login` VARCHAR(50) NOT NULL,
+  `password` VARCHAR(45) NOT NULL,
+  `pasecode` VARCHAR(255) NOT NULL,
+  `avatar` VARCHAR(200) NOT NULL,
   `type` INT NULL COMMENT '0-student, 1-teacher',
   PRIMARY KEY (`user_id`))
 ENGINE = InnoDB;
@@ -35,8 +36,8 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `edu_db`.`note` (
   `note_id` INT NOT NULL,
-  `title` VARCHAR(255) NULL,
-  `date` DATE NULL,
+  `title` VARCHAR(255) NOT NULL,
+  `date` DATE NOT NULL,
   `tags` VARCHAR(255) NULL,
   `user_user_id` INT NOT NULL,
   PRIMARY KEY (`note_id`),
