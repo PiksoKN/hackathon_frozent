@@ -1,16 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Bitter');
+
 .notes {
+    font-family: 'Bitter', serif;
     width:200px;
     height:120px;
-    border-style: groove;
+    border: 2px solid gray;
+    border-radius: 5px;
     position:relative;
     margin: 10px 10px 10px 10px;
+    background-image:url(../img/notes.jpg);
+    background-size:cover;
+    
+    
+    
+
   }
-  h2.note {
-    padding: 0px 0px 0px 20px;
-  }
-  h5.note {
+  .note-title {
     position: absolute;
-    bottom: 0px;
-    right: 20px;
+    top: 15px;
+    left: 10px;
+    font-size: 24px;
+    padding: 0px 0px 0px 10px;
+  }
+  .note-date {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
     font-size: 18px;
   }
+ 
