@@ -12,11 +12,15 @@ a     { text-decoration: none; }
 .header-search-input  { background: rgba(183, 183, 183, 0.5); height: 20px; margin-left: 5px; padding: 5px 10px; border: 0px; border-radius: 15px; }
 .header-search-icon   { position: relative; color: #595959; }
 .header-button-wrap   { position: absolute; top: 15px; right: 15px; display: flex; align-content: flex-end; font-size: 20px; line-height: 30px; }
-.header-button        { padding: 10px; margin: 0 3px; color: #595959; transition: 0.2s color; cursor: pointer; }
+.header-button        { padding: 10px; margin: 0 3px; color: #595959; transition: 0.2s color; cursor: pointer; flex-shrink: 0; flex-grow: 0; }
 .header-button:hover  { color: #75afc6 }
 
 /* Leader */
 .leader       { position: fixed; top: 80px; left: 0px; height: calc(100% - 80px); background: #dedede80; width: 80px; }
+.leader-button-wrap     { position: relative; top: 0px; display: flex; flex-direction: column; align-content: flex-start; font-size: 30px; margin-top: 5px; }
+.leader-button          { padding: 10px; margin: 10px 0; color: #595959; transition: 0.2s color; cursor: pointer; text-align: center; }
+.leader-button-checked  { text-shadow: 2px 2px 3px #51a4c5; color:#417384 !important; }
+.leader-button:hover    { color: #75afc6 }
 
 /* Content */
 .content      { position: fixed; top: 80px; left: 80px; width: calc(100% - 80px); height: calc(100% - 80px); }
