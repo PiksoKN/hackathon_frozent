@@ -1,0 +1,16 @@
+.notes {
+    width:200px;
+    height:120px;
+    border-style: groove;
+    position:relative;
+    margin: 10px 10px 10px 10px;
+  }
+  h2.note {
+    padding: 0px 0px 0px 20px;
+  }
+  h5.note {
+    position: absolute;
+    bottom: 0px;
+    right: 20px;
+    font-size: 18px;
+  }
