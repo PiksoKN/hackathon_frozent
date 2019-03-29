@@ -29,15 +29,19 @@
     
     <!-- Left Header -->
     <div class="leader">
-        
+        <div class="leader-button-wrap">
+            <div class="leader-button leader-button-checked"><i class="fa fa-file-text-o" aria-hidden="true"></i></div>
+            <div class="leader-button"><i class="fa fa-gavel" aria-hidden="true"></i></div>
+            <div class="leader-button"><i class="fa fa-cog" aria-hidden="true"></i></div>
+        </div>
     </div>
     
     <!-- Content -->
     <div class="content">
 
     <div class="notes">
-      <h2 class="note">TEKST</h2>
-      <h5 class="note">23.08.19</h5>
+      <div class="note-title">Notatka</div>
+      <div class="note-date">23.08.19</div>
     </div>
         
     </div>
