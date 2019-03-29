@@ -21,9 +21,9 @@
             <input type="text" placeholder="Search..." class="header-search-input">
         </div>
         <div class="header-button-wrap">
-            <div class="header-button"><i class="fa fa-file-text-o" aria-hidden="true"></i></div>
-            <div class="header-button"><i class="fa fa-gavel" aria-hidden="true"></i></div>
             <div class="header-button"><i class="fa fa-cog" aria-hidden="true"></i></div>
+            <div class="header-splitter"></div>
+            <div class="header-avatar" style="background-image: url(http://res.frozent.pl/sdadsd.jpg)"></div>
         </div>
     </div>
     
