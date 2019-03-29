@@ -1,13 +1,19 @@
 /* Basics */
-body  { padding: 0; margin: 0; }
+body  { padding: 0; margin: 0; background: #fafafa; }
 a     { text-decoration: none; }
 
 /* Logo */
-.logo-wrap    { position: fixed; top: 0; left: 0; width: 80px; height: 80px; background: #aaa; }
+.logo-wrap    { position: fixed; top: 0; left: 0; width: 80px; height: 80px; background: #dbdbdb; }
 .logo         { position: absolute; top: 5px; left: 5px; height: 70px; width: 70px; }
 
 /* Header */
-.header       { position: absolute; top: 0; left: 80px; width: calc(100% - 80px); background: #bbb; height: 80px; }
+.header       { position: fixed; top: 0; left: 80px; width: calc(100% - 80px); background: #dedede80; height: 80px; }
+.header-search        { position: relative; margin-top: 25px; margin-left: 25px; }
+.header-search-input  { background: rgba(183, 183, 183, 0.5); height: 20px; margin-left: 5px; padding: 5px 10px; border: 0px; border-radius: 15px; }
+.header-search-icon   { position: relative; color: #595959; }
 
 /* Leader */
-.leader       { position: absolute; top: 80px; left: 0px; height: calc(100% - 80px); background: #bbb; width: 80px; }
+.leader       { position: fixed; top: 80px; left: 0px; height: calc(100% - 80px); background: #dedede80; width: 80px; }
+
+/* Content */
+.content      { position: fixed; top: 80px; left: 80px; width: calc(100% - 80px); height: calc(100% - 80px); }
