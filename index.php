@@ -3,7 +3,7 @@
 <head>
     <title>Index</title>
     <script src="script.js"></script>
-    <link href="index.css" rel="stylesheet" type="text/css">
+    <link href="css/index.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>

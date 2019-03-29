@@ -1,0 +1,13 @@
+/* Basics */
+body  { padding: 0; margin: 0; }
+a     { text-decoration: none; }
+
+/* Logo */
+.logo-wrap    { position: fixed; top: 0; left: 0; width: 80px; height: 80px; background: #aaa; }
+.logo         { position: absolute; top: 5px; left: 5px; height: 70px; width: 70px; }
+
+/* Header */
+.header       { position: absolute; top: 0; left: 80px; width: calc(100% - 80px); background: #bbb; height: 80px; }
+
+/* Leader */
+.leader       { position: absolute; top: 80px; left: 0px; height: calc(100% - 80px); background: #bbb; width: 80px; }
