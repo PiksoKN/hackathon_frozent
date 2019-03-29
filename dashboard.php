@@ -2,9 +2,10 @@
 <html>
 <head>
     <title>Index</title>
-    <script src="script.js"></script>
+    <script src="dashboard.js"></script>
     <link href="css/dashboard.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="data\font-awesome\css\font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
 </head>
 
 <body>
@@ -29,9 +30,18 @@
     <!-- Left Header -->
     <div class="leader">
         <div class="leader-button-wrap">
-            <div class="leader-button leader-button-checked"><i class="fa fa-file-text-o" aria-hidden="true"></i></div>
-            <div class="leader-button"><i class="fa fa-gavel" aria-hidden="true"></i></div>
-            <div class="leader-button"><i class="fa fa-cog" aria-hidden="true"></i></div>
+            <a href="dashboard.php">
+                <div class="leader-button leader-button-checked">
+                    <div class="leader-label"><div class="leader-label-arrleft"></div><div class="leader-label-arrright"></div>DASHBOARD</div>
+                    <i class="fa fa-user-o" aria-hidden="true"></i>
+                </div>
+            </a>
+            <a href="notes.php">
+                <div class="leader-button">
+                    <div class="leader-label"><div class="leader-label-arrleft"></div><div class="leader-label-arrright"></div>NOTES</div>
+                    <i class="fa fa-files-o" aria-hidden="true"></i>
+                </div>
+            </a>
         </div>
     </div>
     
