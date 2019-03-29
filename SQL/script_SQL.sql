@@ -19,7 +19,7 @@ USE edu_db ;
 -- Table `user`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `edu_db`.`user` (
-  `user_id` INT NOT NULL,
+  `user_id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(50) NOT NULL,
   `surname` VARCHAR(50) NOT NULL,
   `login` VARCHAR(50) NOT NULL,
@@ -36,11 +36,11 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `edu_db`.`note` (
   `note_id` INT NOT NULL,
-  `title` VARCHAR(255) NOT NULL,
-  `date` DATE NOT NULL,
+  `title` VARCHAR(255) NULL,
+  `date` DATE NULL,
   `tags` VARCHAR(255) NULL,
   `user_user_id` INT NOT NULL,
-  PRIMARY KEY (`note_id`),
+  PRIMARY KEY (`note_id`, `user_user_id`),
   INDEX `fk_note_user_idx` (`user_user_id` ASC),
   CONSTRAINT `fk_note_user`
     FOREIGN KEY (`user_user_id`)
@@ -48,3 +48,19 @@ CREATE TABLE IF NOT EXISTS `edu_db`.`note` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
+
+-- ------------------------------------------------------
+-- Add new 'user`
+-- ------------------------------------------------------
+
+INSERT INTO `user` (`user_id`, `name`, `surname`, `login`, `password`, `pasecode`, `avatar`, `type`) VALUES (1, 'Kamil', 'Nowak', 'kamil', 'kamil', 'szyfr', 'url', '0');
+INSERT INTO `user` (`user_id`, `name`, `surname`, `login`, `password`, `pasecode`, `avatar`, `type`) VALUES (2, 'Jacek', 'Nowak', 'jacek', 'jacek', 'szyfr', 'url', '1');
+INSERT INTO `user` (`user_id`, `name`, `surname`, `login`, `password`, `pasecode`, `avatar`, `type`) VALUES (3, 'Tomek', 'Nowak', 'tomek', 'tomek', 'szyfr', 'url', '0');
+
+-- ------------------------------------------------------
+-- Add new 'note`
+-- ------------------------------------------------------
+
+INSERT INTO `edu_db`.`note` (`note_id`, `title`, `date`, `tags`, `user_user_id`) VALUES (1, 'Matematyka', '2019-03-29', 'matematyka, fdgdfg', 1);
+INSERT INTO `edu_db`.`note` (`note_id`, `title`, `date`, `tags`, `user_user_id`) VALUES (2, 'Matematyka', '2019-03-29', 'matematyka, fdgdfg', 2);
+INSERT INTO `edu_db`.`note` (`note_id`, `title`, `date`, `tags`, `user_user_id`) VALUES (3, 'Matematyka', '2019-03-29', 'matematyka, fdgdfg', 1);
