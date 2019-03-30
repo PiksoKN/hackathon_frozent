@@ -58,7 +58,7 @@ INSERT INTO `user` (`user_id`, `name`, `surname`, `login`, `password`, `pasecode
 INSERT INTO `user` (`user_id`, `name`, `surname`, `login`, `password`, `pasecode`, `avatar`, `type`) VALUES (2, 'Jacek', 'Nowak', 'jacek', 'jacek', 'szyfr', 'url', '1');
 INSERT INTO `user` (`user_id`, `name`, `surname`, `login`, `password`, `pasecode`, `avatar`, `type`) VALUES (3, 'Tomek', 'Nowak', 'tomek', 'tomek', 'szyfr', 'url', '0');
 
--- ------------------------------------------------------
+-- ------------------------------------------------------ 
 -- Add new 'note`
 -- ------------------------------------------------------
 

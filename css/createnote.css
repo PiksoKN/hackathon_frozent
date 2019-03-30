@@ -5,7 +5,7 @@ a     { text-decoration: none; }
 /* Logo */
 .logo-wrap    { position: fixed; z-index: 9; top: 0; left: 0; width: 80px; height: 80px; background: #dbdbdb; }
 .logo         { position: absolute; top: 5px; left: 5px; height: 70px; width: 70px; }
-
+ 
 /* Header */
 .header       { position: fixed; z-index: 9; top: 0; left: 80px; width: calc(100% - 80px); background: #dedede80; height: 80px; }
 .header-caption       { font-family: 'Montserrat', sans-serif; font-style: italic; font-size: 24px; color: #a8a8a8; }

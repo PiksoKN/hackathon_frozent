@@ -6,7 +6,7 @@
  * https://github.com/timdown/rangy
  *
  * Depends on Rangy core.
- *
+ * 
  * Copyright 2015, Tim Down
  * Licensed under the MIT license.
  * Version: 1.3.0

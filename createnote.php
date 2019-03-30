@@ -45,7 +45,7 @@
         <div class="tools-button" onclick="surroundRange(6)"><div class="color-box" style="background-color: green"></div></div>
         <div class="tools-button" onclick="surroundRange(7)"><div class="color-box" style="background-color: blue"></div></div>
         <div class="tools-splitter"></div>
-        <div class="tools-label">Size</div>
+        <div class="tools-label">Size</div> 
         <div class="tools-button" onclick="surroundRange(8,10)" style="font-size: 10px;">10px</div>
         <div class="tools-button" onclick="surroundRange(8,14)" style="font-size: 10px;">14px</div>
         <div class="tools-button" onclick="surroundRange(8,18)" style="font-size: 10px;">18px</div>

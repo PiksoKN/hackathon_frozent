@@ -7,7 +7,7 @@
     <script src="script.js"></script>
     <link href="css\index.css" rel="stylesheet" type="text/css">
 </head>
-
+ 
 <body>
     <!-- Header -->
     <div class="header">

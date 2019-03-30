@@ -14,7 +14,7 @@
  * - innerText method for elements
  *
  * References
- *
+ * 
  * https://www.w3.org/Bugs/Public/show_bug.cgi?id=13145
  * http://aryeh.name/spec/innertext/innertext.html
  * http://dvcs.w3.org/hg/editing/raw-file/tip/editing.html

@@ -16,7 +16,7 @@ fclose($file);
 
 $query = 'INSERT INTO note(title,user_user_id,ref) VALUES ("' . strip_tags($_POST["noteTitle"]) . '",1,"' . ($titl.$i) . '")';
 $result = mysqli_query($mysqli,$query);
-
+ 
 // Redirect to all notes
 echo "<script type='text/javascript'>window.location = 'http://localhost/notes.php';</script>";
 ?>
