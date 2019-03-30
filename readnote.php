@@ -11,7 +11,13 @@
 </head>
 
 <?php
+    require("connect.php");
     $opened = file_get_contents("notes/" . $_GET["id"] . ".txt");
+    $query = 'SELECT title,time,tags FROM note WHERE ref="' . $_GET["id"] . '"';
+    $result = mysqli_query($mysqli,$query);
+    while($row = $result->fetch_assoc()){
+        $title = $row["title"];
+    }
 ?>
 
 <body>
@@ -23,7 +29,7 @@
     <!-- Header -->
     <div class="header">
         <div class="header-search">
-            <div class="header-caption">Create New Note</div>
+            <div class="header-caption"><?php echo $title; ?></div>
             <div class="header-splitter"></div>
             <i class='fa fa-search header-search-icon' aria-hidden='true'></i>
             <input type="text" placeholder="Search..." class="header-search-input">

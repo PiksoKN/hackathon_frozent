@@ -14,12 +14,14 @@
   .note-title {
     position: absolute;
     top: 15px;
+    color: black;
     left: 10px;
     font-size: 24px;
     padding: 0px 0px 0px 10px;
   }
   .note-date {
     position: absolute;
+    color: black;
     bottom: 5px;
     right: 10px;
     font-size: 18px;
@@ -62,7 +64,7 @@ a     { text-decoration: none; }
 .content-header  { position: relative; font-size: 32px; font-weight: 900; color: #303030; padding: 10px; font-family: 'Roboto', sans-serif; }
 .content-card    { position: relative; }
 .content-notes   { position: relative; width: 100%; padding:10px; display: flex; align-content: space-between; flex-wrap: wrap; }
-.notes           { font-family: 'Montserrat', sans-serif; flex-grow: 0; flex-shrink: 0; min-width: 200px; max-width: 400px; width: 20vw; height: 120px; border: 2px solid gray; border-radius: 5px; position: relative; margin: 10px 10px 5px; background-image: url(../data/notes.jpg); background-size: cover; }
+.notes           { font-family: 'Montserrat', sans-serif; flex-grow: 0; flex-shrink: 0; user-select: none; -moz-user-select: none; min-width: 200px; max-width: 400px; width: 20vw; height: 120px; border: 2px solid gray; border-radius: 5px; position: relative; margin: 10px 10px 5px; background-image: url(../data/notes.jpg); background-size: cover; }
 .note-title      { position: absolute; top: 15px; left: 10px; font-size: 20px; padding: 0px 0px 0px 10px; }
 .note-date       { position: absolute; bottom: 5px; right: 10px; font-size: 18px; }
 

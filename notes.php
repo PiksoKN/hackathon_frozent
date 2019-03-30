@@ -95,15 +95,15 @@
 
 
             $id=1;
-            $ile_danych = $mysqli->query("SELECT title, time FROM note where user_user_id = " . mysqli_real_escape_string($mysqli,$id));
+            $ile_danych = $mysqli->query("SELECT title, time, ref FROM note where user_user_id = " . mysqli_real_escape_string($mysqli,$id));
             $tabelka = Array();
             while( $notatka = mysqli_fetch_array($ile_danych)){
-                echo '<div class="notes">
+                echo '<a href="readnote.php?id='.$notatka['ref'].'"><div class="notes">
                 <div class="note-title">' . $notatka['title'] . '</div>';
                 echo '<div class="note-date">' . date("Y-m-d H:i:s", strtotime($notatka['time'])) . '</div>
-                </div>';
+                </div></a>';
                 $tabelka2 = Array();
-                array_push($tabelka2,$notatka['title'],date("Y-m-d H:i:s", strtotime($notatka['time'])));
+                array_push($tabelka2,$notatka['title'],date("Y-m-d H:i:s", strtotime($notatka['time'])),$notatka['ref']);
                 array_push($tabelka,$tabelka2);
             }
             
@@ -121,9 +121,9 @@
             document.getElementById("empty").innerHTML="";
             for(var i=0;i<table.length;i++){
                 if(table[i][0].toLowerCase().indexOf(x.toLowerCase())!=-1){
-                    ser = document.createElement("div");
-                    ser.className = "notes"
-                    ser.innerHTML = "<div class='note-title'>" + table[i][0] + "</div><div class='note-date'>"+table[i][1]+"</div>"
+                    ser = document.createElement("a");
+                    ser.href = "readnote.php?id=" + table[i][2]
+                    ser.innerHTML = "<div class='notes'><div class='note-title'>" + table[i][0] + "</div><div class='note-date'>"+table[i][1]+"</div></div>"
                     document.getElementById("empty").appendChild(ser)
                 }
             }
