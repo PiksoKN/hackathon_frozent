@@ -35,7 +35,7 @@ ENGINE = InnoDB;
 -- Table `note`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `edu_db`.`note` (
-  `note_id` INT NOT NULL,
+  `note_id` INT NOT NULL AUTO_INCREMENT,
   `title` VARCHAR(255) NULL,
   `time` TIMESTAMP(6) NULL,
   `tags` VARCHAR(255) NULL,

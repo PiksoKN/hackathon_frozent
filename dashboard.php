@@ -21,8 +21,6 @@
         <div class="header-search">
             <div class="header-caption">Dashboard</div>
             <div class="header-splitter"></div>
-            <i class='fa fa-search header-search-icon' aria-hidden='true'></i>
-            <input type="text" placeholder="Search..." class="header-search-input">
         </div>
         <div class="header-button-wrap">
             <div class="header-splitter"></div>
@@ -63,10 +61,10 @@
             <div class="content-notes">
                 <?php
                     require("connect.php");
-                    $quary = "SELECT * FROM note WHERE user_user_id = 1 ORDER BY time DESC LIMIT 3";
+                    $quary = "SELECT * FROM note WHERE user_user_id = 1 ORDER BY time DESC LIMIT 6";
                     $result = mysqli_query($mysqli,$quary);
                     while($row = $result->fetch_assoc()){
-                        echo '<div class="notes"><div class="note-title">' . $row["title"] . '</div><div class="note-date">' . date("Y-m-d", strtotime($row["time"])) . '</div></div>';
+                        echo '<div class="notes" onclick="window.location=\'readnote.php?id=' . $row["ref"] . '\'"><div class="note-title">' . $row["title"] . '</div><div class="note-date">' . date("Y-m-d H:i:s", strtotime($row["time"])) . '</div></div>';
                     }
                     $quary = "SELECT DISTINCT time FROM note WHERE user_user_id = 1";
                     $result = mysqli_query($mysqli,$quary);

@@ -27,7 +27,6 @@
         <div class="header-button-wrap">
             <div class="header-button"><i class="fa fa-align-left" aria-hidden="true"></i></div>
             <div class="header-button" onclick="saveWork()"><i class="fa fa-floppy-o" aria-hidden="true"></i></div>
-            <div class="header-button"><i class="fa fa-download" aria-hidden="true"></i></div>
             <div class="header-splitter"></div>
             <div class="header-button-av"><i class="fa fa-cog" aria-hidden="true"></i></div>
             <a href="logout.php"><div class="header-button-av"><i class="fa fa-sign-out" aria-hidden="true"></i></div></a>
