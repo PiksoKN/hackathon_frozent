@@ -3,9 +3,11 @@
 <head>
     <title>Index</title>
     <script src="dashboard.js"></script>
-    <link href="css/dashboard.css" rel="stylesheet" type="text/css">
+    <link href="css/createnote.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="data\font-awesome\css\font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
 
 <body>
@@ -17,11 +19,14 @@
     <!-- Header -->
     <div class="header">
         <div class="header-search">
+            <div class="header-caption">Create New Note</div>
+            <div class="header-splitter"></div>
             <i class='fa fa-search header-search-icon' aria-hidden='true'></i>
             <input type="text" placeholder="Search..." class="header-search-input">
         </div>
         <div class="header-button-wrap">
-            <div class="header-button"><i class="fa fa-files-o" aria-hidden="true"></i></div>
+            <div class="header-button"><i class="fa fa-align-left" aria-hidden="true"></i></div>
+            <div class="header-button"><i class="fa fa-download" aria-hidden="true"></i></div>
             <div class="header-splitter"></div>
             <div class="header-button-av"><i class="fa fa-cog" aria-hidden="true"></i></div>
             <a href="logout.php"><div class="header-button-av"><i class="fa fa-sign-out" aria-hidden="true"></i></div></a>
@@ -55,7 +60,7 @@
     
     <!-- Content -->
     <div class="content">
-        
+        <pre class="content-writepanel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true">New Note</pre>
     </div>
 </body>
 </html>

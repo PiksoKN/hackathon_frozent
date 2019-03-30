@@ -36,6 +36,7 @@
     <link href="css/notes.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="data\font-awesome\css\font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
 
 <body>
@@ -47,10 +48,10 @@
     <!-- Header -->
     <div class="header">
         <div class="header-search">
+            <div class="header-caption">All Notes</div>
+            <div class="header-splitter"></div>
             <i class='fa fa-search header-search-icon' aria-hidden='true'></i>
             <input type="text" oninput="" placeholder="Search..." class="header-search-input" name="wyrazenie">
-
-
         </div>
         <div class="header-button-wrap">
             <div class="header-button"><i class="fa fa-files-o" aria-hidden="true"></i></div>
@@ -87,8 +88,6 @@
     
     <!-- Content -->
     <div class="content">
-       
-            <div class="content-header">All Notes</div>
             <div class="content-notes">
                 
             <?php

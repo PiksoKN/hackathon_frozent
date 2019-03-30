@@ -8,7 +8,8 @@ a     { text-decoration: none; }
 
 /* Header */
 .header       { position: fixed; z-index: 9; top: 0; left: 80px; width: calc(100% - 80px); background: #dedede80; height: 80px; }
-.header-search        { position: relative; margin-top: 25px; margin-left: 25px; }
+.header-caption       { font-family: 'Montserrat', sans-serif; font-size: 24px; color: #595959; }
+.header-search        { position: relative; display: flex; margin-top: 17px; margin-left: 17px; align-items: center; }
 .header-search-input  { font-family: 'Roboto', sans-serif; background: rgba(183, 183, 183, 0.5); height: 20px; margin-left: 5px; padding: 5px 10px; border: 0px; border-radius: 15px; }
 .header-search-icon   { position: relative; color: #595959; }
 .header-button-wrap   { position: absolute; top: 15px; right: 15px; display: flex; align-content: flex-end; font-size: 20px; line-height: 30px; }
