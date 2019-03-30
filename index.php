@@ -27,7 +27,7 @@
                     <div class="napisS1">Student / Uczeń</div>
                     <div class="napisD1">Konto dla osób uczących się</div> 
                 </div>
-            </div> </a>
+            </div></a>
 
             <!-- Box 2 -->
              <a href="dashboard.php"> <div class="box">
