@@ -31,8 +31,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Index</title>
-    <script src="js/dashboard.js"></script>
+    <title>All notes</title>
     <link href="css/notes.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="data\font-awesome\css\font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
@@ -54,7 +53,7 @@
             <input type="text" oninput="search(this.value)" placeholder="Search..." class="header-search-input" name="wyrazenie">
         </div>
         <div class="header-button-wrap">
-            <div class="header-button"><i class="fa fa-files-o" aria-hidden="true"></i></div>
+            <div class="header-button"><i class="fa fa-trash-o" aria-hidden="true"></i></div>
             <div class="header-splitter"></div>
             <div class="header-button-av"><i class="fa fa-cog" aria-hidden="true"></i></div>
             <a href="logout.php"><div class="header-button-av"><i class="fa fa-sign-out" aria-hidden="true"></i></div></a>
