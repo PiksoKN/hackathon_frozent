@@ -100,10 +100,10 @@
             while( $notatka = mysqli_fetch_array($ile_danych)){
                 echo '<a href="readnote.php?id='.$notatka['ref'].'"><div class="notes">
                 <div class="note-title">' . $notatka['title'] . '</div>';
-                echo '<div class="note-date">' . date("Y-m-d H:i:s", strtotime($notatka['time'])) . '</div>
+                echo '<div class="note-date">' . date("Y-m-d H:i", strtotime($notatka['time'])) . '</div>
                 </div></a>';
                 $tabelka2 = Array();
-                array_push($tabelka2,$notatka['title'],date("Y-m-d H:i:s", strtotime($notatka['time'])),$notatka['ref']);
+                array_push($tabelka2,$notatka['title'],date("Y-m-d H:i", strtotime($notatka['time'])),$notatka['ref']);
                 array_push($tabelka,$tabelka2);
             }
             
