@@ -32,10 +32,10 @@
 <html>
 <head>
     <title>Index</title>
-    <script src="script.js"></script>
-    <link href="css/dashboard.css" rel="stylesheet" type="text/css">
+    <script src="js/dashboard.js"></script>
     <link href="css/notes.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="data\font-awesome\css\font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
 </head>
 
 <body>
@@ -79,76 +79,23 @@
     
     <!-- Content -->
     <div class="content">
-
-        <div class="notes">
-        <div class="note-title">Notatka</div>
-        <div class="note-date">23.08.19</div>
-        </div>
-        
-<?php
-
-    class notatka { 
-     
-	  // metoda select - wyświetlanie rekordów
-      // argument: polecenie SQL wybierające rekordy z bazy danych
-      // zwraca: obiekt - wybrane dane lub komunikat o błędzie
-      function select($query)  { 
-       try{
-			  $pdo = new PDO('mysql:host=localhost;dbname=edu_db', 'root', '');
-			  $pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-			  $stmt = $pdo -> query($query);
-			  $dane = $stmt;
-			  return $dane;
-			  $stmt -> closeCursor();
-		  }
-       catch(PDOException $e){
-          	  return 'Wystąpił błąd: '.$e->getMessage();
-          }  
-	  }
-	}
-    ?>
-	<?php
-	$bd = new notatka();
-	$wyniki = $bd->select("SELECT title,date FROM note where user_user_id = 1");
-	// IS_OBJECT Sprawdza, czy zmienna jest obiektem
-	if (is_object($wyniki))
-	{
-	echo '<table>';
-	// foreach przegląda kolejne elementy tablicy
-	foreach($wyniki as $wynik) {
-		
-		$dane=1;
-		
-		echo '<tr>';
-		
-		for ($i=0;$i<=$dane;$i++) {
-			echo '<td style="padding:10px">';
-			echo $wynik[$i].' ';
-			echo'</td>';
-		}
-		echo'</tr>';
-		}
-		echo '</table>';
-		
-		
-	}
-	else
-	{
-		echo $wyniki;
-		}
-    ?>
-    
-    <?php
-
-    $ile_danych = $mysqli->query("SELECT title, date FROM note where user_user_id = 1");
-    while( $notatka = mysqli_fetch_array($ile_danych)){
-        echo '<p>' . $notatka['title'] . '</p>';
-        echo '<p>' . $notatka['date'] . '</p>';
-    }
-    
-
-	?>
-
+       
+            <div class="content-header">All Notes</div>
+            <div class="content-notes">
+                
+            <?php
+            $id=1;
+            $ile_danych = $mysqli->query("SELECT title, date FROM note where user_user_id = " . mysqli_real_escape_string($mysqli,$id));
+            while( $notatka = mysqli_fetch_array($ile_danych)){
+                echo '<div class="notes">
+                <div class="note-title">' . $notatka['title'] . '</div>';
+                echo '<div class="note-date">' . $notatka['date'] . '</div>
+                </div>';
+            }
+            ?>
+            
+            </div>
+       
     </div>
 </body>
 </html>
