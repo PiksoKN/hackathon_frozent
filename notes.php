@@ -48,7 +48,7 @@
     <div class="header">
         <div class="header-search">
             <i class='fa fa-search header-search-icon' aria-hidden='true'></i>
-            <input type="text" placeholder="Search..." class="header-search-input" name="wyrazenie">
+            <input type="text" oninput="" placeholder="Search..." class="header-search-input" name="wyrazenie">
 
 
         </div>
@@ -86,12 +86,14 @@
             <div class="content-notes">
                 
             <?php
+
+
             $id=1;
             $ile_danych = $mysqli->query("SELECT title, time FROM note where user_user_id = " . mysqli_real_escape_string($mysqli,$id));
             while( $notatka = mysqli_fetch_array($ile_danych)){
                 echo '<div class="notes">
                 <div class="note-title">' . $notatka['title'] . '</div>';
-                echo '<div class="note-date">' . $notatka['time'] . '</div>
+                echo '<div class="note-date">' . date("Y-m-d H:i:s", strtotime($notatka['time'])) . '</div>
                 </div>';
             }
             ?>
