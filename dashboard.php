@@ -71,9 +71,7 @@
         <div class="content-column">
             <div class="content-header">Calendar</div>
             <div class="content-wrap">
-                <div class="content-miniheader-left"></div>
                 <div class="content-miniheader" id="mandday"></div>
-                <div class="content-miniheader-right"></div>
             </div>
             <div class="content-calendar" id="calendar">
                 <div class="content-calendar-label">Monday</div><div class="content-calendar-label">Tuesday</div><div class="content-calendar-label">Wednesday</div><div class="content-calendar-label">Thursday</div><div class="content-calendar-label">Friday</div><div class="content-calendar-label">Saturday</div><div class="content-calendar-label">Sunday</div>
