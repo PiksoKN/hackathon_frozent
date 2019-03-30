@@ -36,7 +36,7 @@ a     { text-decoration: none; }
 .content-header  { position: relative; font-size: 32px; font-weight: 900; color: #303030; padding: 10px; font-family: 'Roboto', sans-serif; }
 .content-card    { position: relative; }
 .content-notes   { position: relative; width: 100%; display: flex; align-content: space-between; flex-wrap: wrap; }
-.notes           { font-family: 'Montserrat', sans-serif; flex-grow: 0; flex-shrink: 0; cursor: pointer; width: calc(50% - 24px); user-select: none; -moz-user-select: none; height: 140px; border: 2px solid gray; border-radius: 5px; position: relative; margin: 10px 10px 5px; background-image: url(../data/notes.jpg); background-size: cover; }
+.notes           { font-family: 'Montserrat', sans-serif; flex-grow: 0; flex-shrink: 0; cursor: pointer; width: calc(50% - 24px); user-select: none; -moz-user-select: none; height: 140px; border: 2px solid gray; border-radius: 2px; position: relative; margin: 10px 10px 5px; background-image: url(../data/notes.jpg); background-size: cover; }
 .note-title      { color:black; position: absolute; top: 15px; left: 10px; font-size: 20px; padding: 0px 0px 0px 10px; white-space:nowrap; overflow:hidden; text-overflow: ellipsis; width: calc(100% - 40px); }
 .note-date       { color:black; position: absolute; bottom: 5px; right: 10px; font-size: 18px; }
 
