@@ -57,7 +57,7 @@
                 </div>
             </a>
             <a href="createnote.php">
-                <div class="leader-button leader-button-checked">
+                <div class="leader-button">
                     <div class="leader-label"><div class="leader-label-arrleft"></div><div class="leader-label-arrright"></div>CREATE NEW NOTE</div>
                     <i class="fa fa-plus-square-o" aria-hidden="true"></i>
                 </div>
