@@ -1,3 +1,33 @@
+<?php
+
+	/*
+	
+	Sprawdzanie czy użytkownik odwiedzający stronę jest zalogowany.
+	W momencie gdy nie jest zalogowany zostaje przeniesiony do "index.php"
+	
+	*/
+
+	/*session_start();
+	
+	if (!isset($_SESSION['zalogowany']))
+	{
+		header('Location: index.php');
+		exit();
+    }
+    */
+	
+?>
+<?php
+
+	/*
+	
+	Połaczenie z bazą danych z pliku "connect.php"
+	
+	*/
+
+    include('connect.php');
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -50,11 +80,75 @@
     <!-- Content -->
     <div class="content">
 
-    <div class="notes">
-      <div class="note-title">Notatka</div>
-      <div class="note-date">23.08.19</div>
-    </div>
+        <div class="notes">
+        <div class="note-title">Notatka</div>
+        <div class="note-date">23.08.19</div>
+        </div>
         
+<?php
+
+    class notatka { 
+     
+	  // metoda select - wyświetlanie rekordów
+      // argument: polecenie SQL wybierające rekordy z bazy danych
+      // zwraca: obiekt - wybrane dane lub komunikat o błędzie
+      function select($query)  { 
+       try{
+			  $pdo = new PDO('mysql:host=localhost;dbname=edu_db', 'root', '');
+			  $pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+			  $stmt = $pdo -> query($query);
+			  $dane = $stmt;
+			  return $dane;
+			  $stmt -> closeCursor();
+		  }
+       catch(PDOException $e){
+          	  return 'Wystąpił błąd: '.$e->getMessage();
+          }  
+	  }
+	}
+    ?>
+	<?php
+	$bd = new notatka();
+	$wyniki = $bd->select("SELECT title,date FROM note where user_user_id = 1");
+	// IS_OBJECT Sprawdza, czy zmienna jest obiektem
+	if (is_object($wyniki))
+	{
+	echo '<table>';
+	// foreach przegląda kolejne elementy tablicy
+	foreach($wyniki as $wynik) {
+		
+		$dane=1;
+		
+		echo '<tr>';
+		
+		for ($i=0;$i<=$dane;$i++) {
+			echo '<td style="padding:10px">';
+			echo $wynik[$i].' ';
+			echo'</td>';
+		}
+		echo'</tr>';
+		}
+		echo '</table>';
+		
+		
+	}
+	else
+	{
+		echo $wyniki;
+		}
+    ?>
+    
+    <?php
+
+    $ile_danych = $mysqli->query("SELECT title, date FROM note where user_user_id = 1");
+    while( $notatka = mysqli_fetch_array($ile_danych)){
+        echo '<p>' . $notatka['title'] . '</p>';
+        echo '<p>' . $notatka['date'] . '</p>';
+    }
+    
+
+	?>
+
     </div>
 </body>
 </html>
