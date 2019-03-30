@@ -65,3 +65,9 @@ INSERT INTO `user` (`user_id`, `name`, `surname`, `login`, `password`, `pasecode
 INSERT INTO `edu_db`.`note` (`note_id`, `title`, `time`, `tags`, `user_user_id`, `ref`) VALUES (1, 'Matematyka', '2019-03-30 05:10:24.086000', 'matematyka, macierze', 1, 'QWER');
 INSERT INTO `edu_db`.`note` (`note_id`, `title`, `time`, `tags`, `user_user_id`, `ref`) VALUES (2, 'Historia', '2019-03-29 05:26:19.086000', 'historia, kraj', 2, 'WERT');
 INSERT INTO `edu_db`.`note` (`note_id`, `title`, `time`, `tags`, `user_user_id`, `ref`) VALUES (3, 'Wzory z fizyki', '2019-03-29 05:35:19.826000', 'fizyka, fale elektromagnetyczne', 1, 'ASDF');
+INSERT INTO `edu_db`.`note` (`note_id`, `title`, `time`, `tags`, `user_user_id`, `ref`) VALUES (1, 'Biologia', '2019-03-30 05:10:24.086000', 'matematyka, macierze', 1, '6789');
+INSERT INTO `edu_db`.`note` (`note_id`, `title`, `time`, `tags`, `user_user_id`, `ref`) VALUES (2, 'Chemia', '2019-03-29 05:26:19.086000', 'historia, kraj', 2, '5678');
+INSERT INTO `edu_db`.`note` (`note_id`, `title`, `time`, `tags`, `user_user_id`, `ref`) VALUES (3, 'Wzory z Chemii ', '2019-03-29 05:35:19.826000', 'fizyka, fale elektromagnetyczne', 1, '4567');
+INSERT INTO `edu_db`.`note` (`note_id`, `title`, `time`, `tags`, `user_user_id`, `ref`) VALUES (1, 'Plastyka', '2019-03-30 05:10:24.086000', 'matematyka, macierze', 1, '3456');
+INSERT INTO `edu_db`.`note` (`note_id`, `title`, `time`, `tags`, `user_user_id`, `ref`) VALUES (2, 'Informatyka', '2019-03-29 05:26:19.086000', 'historia, kraj', 2, '2345');
+INSERT INTO `edu_db`.`note` (`note_id`, `title`, `time`, `tags`, `user_user_id`, `ref`) VALUES (3, 'Wzory z Chemii', '2019-03-29 05:35:19.826000', 'fizyka, fale elektromagnetyczne', 1, '1234');
