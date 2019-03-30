@@ -52,7 +52,6 @@
             <div class="header-splitter"></div>
             <i class='fa fa-search header-search-icon' aria-hidden='true'></i>
             <input type="text" oninput="search(this.value)" placeholder="Search..." class="header-search-input" name="wyrazenie">
-
         </div>
         <div class="header-button-wrap">
             <div class="header-button"><i class="fa fa-files-o" aria-hidden="true"></i></div>
@@ -92,20 +91,33 @@
             <div class="content-notes" id="empty">
                 
             <?php
-
-
             $id=1;
-            $ile_danych = $mysqli->query("SELECT title, time, ref FROM note where user_user_id = " . mysqli_real_escape_string($mysqli,$id));
-            $tabelka = Array();
-            while( $notatka = mysqli_fetch_array($ile_danych)){
-                echo '<a href="readnote.php?id='.$notatka['ref'].'"><div class="notes">
-                <div class="note-title">' . $notatka['title'] . '</div>';
-                echo '<div class="note-date">' . date("Y-m-d H:i", strtotime($notatka['time'])) . '</div>
-                </div></a>';
-                $tabelka2 = Array();
-                array_push($tabelka2,$notatka['title'],date("Y-m-d H:i", strtotime($notatka['time'])),$notatka['ref']);
-                array_push($tabelka,$tabelka2);
+            if(isset($_GET["date"])){
+                $ile_danych = $mysqli->query("SELECT title, time, ref FROM note where user_user_id = " . mysqli_real_escape_string($mysqli,$id) . " and DATE(time) LIKE '".$_GET["date"]."';");
+                $tabelka = Array();
+                while( $notatka = mysqli_fetch_array($ile_danych)){
+                    echo '<a href="readnote.php?id='.$notatka['ref'].'"><div class="notes">
+                    <div class="note-title">' . $notatka['title'] . '</div>';
+                    echo '<div class="note-date">' . date("Y-m-d H:i", strtotime($notatka['time'])) . '</div>
+                    </div></a>';
+                    $tabelka2 = Array();
+                    array_push($tabelka2,$notatka['title'],date("Y-m-d H:i", strtotime($notatka['time'])),$notatka['ref']);
+                    array_push($tabelka,$tabelka2);
+                }
+            } else {
+                $ile_danych = $mysqli->query("SELECT title, time, ref FROM note where user_user_id = " . mysqli_real_escape_string($mysqli,$id));
+                $tabelka = Array();
+                while( $notatka = mysqli_fetch_array($ile_danych)){
+                    echo '<a href="readnote.php?id='.$notatka['ref'].'"><div class="notes">
+                    <div class="note-title">' . $notatka['title'] . '</div>';
+                    echo '<div class="note-date">' . date("Y-m-d H:i", strtotime($notatka['time'])) . '</div>
+                    </div></a>';
+                    $tabelka2 = Array();
+                    array_push($tabelka2,$notatka['title'],date("Y-m-d H:i", strtotime($notatka['time'])),$notatka['ref']);
+                    array_push($tabelka,$tabelka2);
+                }
             }
+            
             
             ?>
             
@@ -120,7 +132,7 @@
             if(x!=""){
             document.getElementById("empty").innerHTML="";
             for(var i=0;i<table.length;i++){
-                if(table[i][0].toLowerCase().indexOf(x.toLowerCase())!=-1){
+                if(table[i][0].toLowerCase().indexOf(x.toLowerCase())!=-1 || table[i][1].indexOf(x)!=-1){
                     ser = document.createElement("a");
                     ser.href = "readnote.php?id=" + table[i][2]
                     ser.innerHTML = "<div class='notes'><div class='note-title'>" + table[i][0] + "</div><div class='note-date'>"+table[i][1]+"</div></div>"

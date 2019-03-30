@@ -22,8 +22,6 @@
         <div class="header-search">
             <div class="header-caption" id="titleForma" onclick="this.style.color = '#595959';this.innerHTML = ''" onchange="if(this.value == ''){this.value = 'Click to edit title'}" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true">Click to edit title</div>
             <div class="header-splitter"></div>
-            <i class='fa fa-search header-search-icon' aria-hidden='true'></i>
-            <input type="text" placeholder="Search..." class="header-search-input">
         </div>
         <div class="header-button-wrap">
             <div class="header-button" onclick="saveWork()"><i class="fa fa-floppy-o" aria-hidden="true"></i></div>
@@ -47,6 +45,18 @@
         <div class="tools-button" onclick="surroundRange(5)"><div class="color-box" style="background-color: yellow"></div></div>
         <div class="tools-button" onclick="surroundRange(6)"><div class="color-box" style="background-color: green"></div></div>
         <div class="tools-button" onclick="surroundRange(7)"><div class="color-box" style="background-color: blue"></div></div>
+        <div class="tools-splitter"></div>
+        <div class="tools-label">Size</div>
+        <div class="tools-button" onclick="surroundRange(8,10)" style="font-size: 10px;">10px</div>
+        <div class="tools-button" onclick="surroundRange(8,14)" style="font-size: 10px;">14px</div>
+        <div class="tools-button" onclick="surroundRange(8,18)" style="font-size: 10px;">18px</div>
+        <div class="tools-button" onclick="surroundRange(8,22)" style="font-size: 10px;">22px</div>
+        <div class="tools-button" onclick="surroundRange(8,26)" style="font-size: 10px;">26px</div>
+        <div class="tools-splitter"></div>
+        <div class="tools-label">Decoration</div>
+        <div class="tools-button" onclick="surroundRange(9)"><i class="fa fa-bold" aria-hidden="true"></i></div>
+        <div class="tools-button" onclick="surroundRange(10)"><i class="fa fa-italic" aria-hidden="true"></i></div>
+        <div class="tools-button" onclick="surroundRange(11)"><i class="fa fa-underline" aria-hidden="true"></i></div>
     </div>
     
     <!-- Left Header -->
@@ -88,7 +98,7 @@
             var sel = rangy.getSelection();
             return sel.rangeCount ? sel.getRangeAt(0) : null;
         }
-        function surroundRange(x) {
+        function surroundRange(x,y="") {
             var range = getFirstRange();
             if(range){
                 switch(x){
@@ -148,6 +158,13 @@
                     case 7:
                         var el = document.createElement("span");
                         el.style.color = "blue";
+                        if (range.canSurroundContents(el)) {
+                            range.surroundContents(el);
+                        } 
+                        break;
+                    case 8:
+                        var el = document.createElement("span");
+                        el.style.fontSize = y + "px";
                         if (range.canSurroundContents(el)) {
                             range.surroundContents(el);
                         } 

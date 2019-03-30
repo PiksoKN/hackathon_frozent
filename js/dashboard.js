@@ -1,6 +1,14 @@
 var monthes = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 yearNow = 0;
 monthNow = 0;
+
+function dd(x){
+    if(x<10){
+        return "0" + x
+    }
+    return x
+}
+
 window.onload = ()=>{
     var calendar = document.getElementById("calendar");
     var dateNow = new Date();
@@ -29,7 +37,7 @@ window.onload = ()=>{
             }
             divek.id = "box" + zliczanko;
             firstTime = false;
-            divek.innerHTML = zliczanko
+            divek.innerHTML = "<a style='color: #141a56; width: 100%; height: 100%' href='notes.php?date="+yearNow+"-"+dd(monthNow+1)+"-" + zliczanko + "'>" + zliczanko + "</a>"
         } else {
             if(zliczanko < lastDay && firstTime == false){
                 divek.className = "content-calendar-box"
@@ -38,7 +46,7 @@ window.onload = ()=>{
                     divek.style.border = "3px solid #1c2369"
                 }
                 divek.id = "box" + zliczanko;
-                divek.innerHTML = zliczanko
+                divek.innerHTML = "<a style='color: #141a56; width: 100%; height: 100%' href='notes.php?date="+yearNow+"-"+dd(monthNow+1)+"-" + zliczanko + "'>" + zliczanko + "</a>"
             } else {
                 divek.className = "content-calendar-empty"
                 divek.innerHTML = "-"

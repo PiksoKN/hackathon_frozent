@@ -31,11 +31,9 @@
         <div class="header-search">
             <div class="header-caption"><?php echo $title; ?></div>
             <div class="header-splitter"></div>
-            <i class='fa fa-search header-search-icon' aria-hidden='true'></i>
-            <input type="text" placeholder="Search..." class="header-search-input">
         </div>
         <div class="header-button-wrap">
-            <div class="header-button"><i class="fa fa-files-o" aria-hidden="true"></i></div>
+            <div class="header-button"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></div>
             <div class="header-splitter"></div>
             <div class="header-button-av"><i class="fa fa-cog" aria-hidden="true"></i></div>
             <a href="logout.php"><div class="header-button-av"><i class="fa fa-sign-out" aria-hidden="true"></i></div></a>
