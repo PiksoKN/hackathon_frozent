@@ -3,7 +3,6 @@
 <head>
     <title>Index</title>
     <script src="dashboard.js"></script>
-    <script src="rangy/rangy-core.js"></script>
     <link href="css/createnote.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="data\font-awesome\css\font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet"> 
@@ -20,18 +19,20 @@
     <!-- Header -->
     <div class="header">
         <div class="header-search">
-            <div class="header-caption" id="titleForma" onclick="this.style.color = '#595959';this.innerHTML = ''" onchange="if(this.value == ''){this.value = 'Click to edit title'}" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true">Click to edit title</div>
+            <div class="header-caption">Create New Note</div>
             <div class="header-splitter"></div>
         </div>
         <div class="header-button-wrap">
+            <div class="header-button"><i class="fa fa-align-left" aria-hidden="true"></i></div>
             <div class="header-button" onclick="saveWork()"><i class="fa fa-floppy-o" aria-hidden="true"></i></div>
             <div class="header-splitter"></div>
             <div class="header-button-av"><i class="fa fa-cog" aria-hidden="true"></i></div>
             <a href="logout.php"><div class="header-button-av"><i class="fa fa-sign-out" aria-hidden="true"></i></div></a>
-            <div class="header-avatar" style="background-image: url(../data/user.png)"></div>
+            <div class="header-avatar" style="background-image: url(http://res.frozent.pl/sdadsd.jpg)"></div>
         </div>
     </div>
     
+<<<<<<< HEAD
     <!-- Tool Header -->
     <div class="tools">
         <div class="tools-label">Align</div>
@@ -59,6 +60,8 @@
         <div class="tools-button" onclick="surroundRange(11)"><i class="fa fa-underline" aria-hidden="true"></i></div>
     </div>
     
+=======
+>>>>>>> aa1e1b45cd236f0ff8de31ef68ff4b19eafff648
     <!-- Left Header -->
     <div class="leader">
         <div class="leader-button-wrap">
@@ -88,12 +91,12 @@
         <pre class="content-writepanel" id="textForma" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true">New Note</pre>
         <form action="publish.php" method="post" id="forma" style="display: none;">
             <input type="text" name="title" value="test">
-            <input type="text" id="hiden2" name="noteTitle">
             <input type="text" id="hiden" name="noteText">
         </form>
     </div>
     
     <script>
+<<<<<<< HEAD
         function getFirstRange() {
             var sel = rangy.getSelection();
             return sel.rangeCount ? sel.getRangeAt(0) : null;
@@ -180,9 +183,10 @@
                 }
             }
         }
+=======
+>>>>>>> aa1e1b45cd236f0ff8de31ef68ff4b19eafff648
         function saveWork(){
             document.getElementById("hiden").value = document.getElementById("textForma").innerHTML;
-            document.getElementById("hiden2").value = document.getElementById("titleForma").innerHTML;
             document.getElementById("forma").submit(); 
         }
     </script>

@@ -37,7 +37,7 @@
             <div class="header-splitter"></div>
             <div class="header-button-av"><i class="fa fa-cog" aria-hidden="true"></i></div>
             <a href="logout.php"><div class="header-button-av"><i class="fa fa-sign-out" aria-hidden="true"></i></div></a>
-            <div class="header-avatar" style="background-image: url(../data/user.png)"></div>
+            <div class="header-avatar" style="background-image: url(http://res.frozent.pl/sdadsd.jpg)"></div>
         </div>
     </div>
     
@@ -66,8 +66,8 @@
     </div>
     
     <!-- Content -->
-    <div class="content" style="top: height: calc(100% - 80px); top: 80px;">
-        <div class="content-writepanel" style="height: calc(100vh - 100px);"><?php echo $opened; ?></div>
+    <div class="content">
+        <div class="content-writepanel"><?php echo $opened; ?></div>
     </div>
 </body>
 </html>
