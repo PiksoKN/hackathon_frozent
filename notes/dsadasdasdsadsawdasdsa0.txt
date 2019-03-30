@@ -1,1 +1,0 @@
-<span style="font-size: 26px;"><span style="color: blue;">New Note</span></span>
