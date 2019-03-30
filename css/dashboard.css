@@ -42,6 +42,7 @@ a     { text-decoration: none; }
 /* Calendar */
 .content-miniheader      { position: relative; font-size: 28px; font-weight: 900; color: #235a7d; padding: 10px; font-family: 'Roboto', sans-serif; text-align: center }
 .content-calendar        { width: 100%; text-align: center; }
-.content-calendar-label  { width: 13%; margin: 3px 3px; display: inline-block; height: 30px; text-align: center; font-family: 'Roboto', sans-serif; line-height: 30px; font-size: 16px; border-bottom: 2px solid #284f9e; position: relative; }
-.content-calendar-empty  { width: 13%; margin: 3px 3px; display: inline-block; height: 40px; background: #e1e1e1; color: #e1e1e1; border-radius: 3px; font-family: 'Roboto', sans-serif; line-height: 40px; font-size: 12px; text-align: center; position: relative }
-.content-calendar-box    { width: 13%; margin: 3px 3px; display: inline-block; height: 40px; background: #94c6da; font-family: 'Roboto', sans-serif; line-height: 40px; font-size: 12px; text-align: center; color: #141a56; border-radius: 3px; position: relative }
+.content-calendar-label  { width: 13%; border: 3px solid #fafafa; display: inline-block; height: 30px; text-align: center; font-family: 'Roboto', sans-serif; line-height: 30px; font-size: 16px; border-bottom: 2px solid #284f9e; position: relative; }
+.content-calendar-empty  { user-select: none; -moz-user-select: none; width: 13%; margin: 3px 3px; display: inline-block; height: 40px; background: #e1e1e1; color: #e1e1e1; border-radius: 3px; font-family: 'Roboto', sans-serif; line-height: 40px; font-size: 12px; text-align: center; position: relative }
+.content-calendar-box    { width: 13%; border: 3px solid #fafafa; display: inline-block; height: 40px; background: #d5e8f0; font-family: 'Roboto', sans-serif; line-height: 40px; font-size: 12px; text-align: center; color: #9ea2c2; border-radius: 3px; position: relative }
+.content-calendar-exist  { width: 13%; border: 3px solid #fafafa; display: inline-block; height: 40px; cursor: pointer; background: #8cb6c8; font-family: 'Roboto', sans-serif; line-height: 40px; font-size: 12px; text-align: center; color: #141a56; border-radius: 3px; position: relative }

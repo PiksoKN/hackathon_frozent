@@ -52,28 +52,55 @@
         <div class="content-column">
             <div class="content-header">Recent Notes</div>
             <div class="content-notes">
-                <div class="notes">
-                    <div class="note-title">Notatka</div>
-                    <div class="note-date">23.08.19</div>
-                </div>
-                <div class="notes">
-                    <div class="note-title">Notatka</div>
-                    <div class="note-date">23.08.19</div>
-                </div>
-                <div class="notes">
-                    <div class="note-title">Notatka</div>
-                    <div class="note-date">23.08.19</div>
-                </div>
+                <?php
+                    require("connect.php");
+                    $quary = "SELECT * FROM note WHERE user_user_id = 1 ORDER BY time DESC LIMIT 3";
+                    $result = mysqli_query($mysqli,$quary);
+                    while($row = $result->fetch_assoc()){
+                        echo '<div class="notes"><div class="note-title">' . $row["title"] . '</div><div class="note-date">' . date("Y-m-d", strtotime($row["time"])) . '</div></div>';
+                    }
+                    $quary = "SELECT DISTINCT time FROM note WHERE user_user_id = 1";
+                    $result = mysqli_query($mysqli,$quary);
+                    $table = Array();
+                    while($row = $result->fetch_assoc()){
+                        array_push($table,date("Y-m-d", strtotime($row["time"])));
+                    }
+                ?>
             </div>
         </div>
         <div class="content-column">
             <div class="content-header">Calendar</div>
-            <div class="content-miniheader" id="mandday"></div>
+            <div class="content-wrap">
+                <div class="content-miniheader-left"></div>
+                <div class="content-miniheader" id="mandday"></div>
+                <div class="content-miniheader-right"></div>
+            </div>
             <div class="content-calendar" id="calendar">
                 <div class="content-calendar-label">Monday</div><div class="content-calendar-label">Tuesday</div><div class="content-calendar-label">Wednesday</div><div class="content-calendar-label">Thursday</div><div class="content-calendar-label">Friday</div><div class="content-calendar-label">Saturday</div><div class="content-calendar-label">Sunday</div>
             </div>
         </div>
     </div>
+        <?php 
+        echo "<script>function checkNotes(){var dateNow = new Date(); yearNow = dateNow.getFullYear();monthNow = dateNow.getMonth();";
+        echo "daty = " . json_encode($table) . ";"; 
+        echo <<<EOT
+        function dd(x){
+            if(x<10){
+                return "0" + x
+            }
+            return x
+        }
+        for(var i=0; i<daty.length; i++){
+            aktual = daty[i].split("-")
+            if(aktual[0] == yearNow && aktual[1] == dd(monthNow+1)){
+                document.getElementById("box" + aktual[2]).className = "content-calendar-exist"
+            }
+        }
+EOT;
+        echo "}</script>";
+        ?>
+        
+    </script>
 </body>
 </html>
 
