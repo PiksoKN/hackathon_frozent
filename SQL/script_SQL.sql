@@ -37,7 +37,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `edu_db`.`note` (
   `note_id` INT NOT NULL,
   `title` VARCHAR(255) NULL,
-  `date` DATE NULL,
+  `time` TIMESTAMP(6) NULL,
   `tags` VARCHAR(255) NULL,
   `user_user_id` INT NOT NULL,
   `ref` VARCHAR(50) NOT NULL,
@@ -62,6 +62,6 @@ INSERT INTO `user` (`user_id`, `name`, `surname`, `login`, `password`, `pasecode
 -- Add new 'note`
 -- ------------------------------------------------------
 
-INSERT INTO `edu_db`.`note` (`note_id`, `title`, `date`, `tags`, `user_user_id`, `ref`) VALUES (1, 'Matematyka', '2019-03-29', 'matematyka, macierze', 1, 'jdk3s2a');
-INSERT INTO `edu_db`.`note` (`note_id`, `title`, `date`, `tags`, `user_user_id`, `ref`) VALUES (2, 'Historia', '2019-03-29', 'historia, kraj', 2, 'fdgtg44');
-INSERT INTO `edu_db`.`note` (`note_id`, `title`, `date`, `tags`, `user_user_id`, `ref`) VALUES (3, 'Wzory z fizyki', '2019-03-29', 'fizyka, fale elektromagnetyczne', 1, 'sdf2jnf');
+INSERT INTO `edu_db`.`note` (`note_id`, `title`, `time`, `tags`, `user_user_id`, `ref`) VALUES (1, 'Matematyka', '2019-03-30 05:10:24.086000', 'matematyka, macierze', 1, 'jdk3s2a');
+INSERT INTO `edu_db`.`note` (`note_id`, `title`, `time`, `tags`, `user_user_id`, `ref`) VALUES (2, 'Historia', '2019-03-29 05:26:19.086000', 'historia, kraj', 2, 'fdgtg44');
+INSERT INTO `edu_db`.`note` (`note_id`, `title`, `time`, `tags`, `user_user_id`, `ref`) VALUES (3, 'Wzory z fizyki', '2019-03-29 05:35:19.826000', 'fizyka, fale elektromagnetyczne', 1, 'sdf2jnf');
