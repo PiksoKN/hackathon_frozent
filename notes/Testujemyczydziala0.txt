@@ -1,0 +1,1 @@
+<span style="color: blue;"><span style="display: block; text-align: center;">N<span style="color: green;">e<span style="color: yellow;">w N</span>ot</span>e</span></span>

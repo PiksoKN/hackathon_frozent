@@ -68,8 +68,8 @@
     </div>
     
     <!-- Content -->
-    <div class="content">
-        <div class="content-writepanel"><?php echo $opened; ?></div>
+    <div class="content" style="top: height: calc(100% - 80px); top: 80px;">
+        <div class="content-writepanel" style="height: calc(100vh - 100px);"><?php echo $opened; ?></div>
     </div>
 </body>
 </html>
