@@ -32,7 +32,6 @@
         </div>
     </div>
     
-<<<<<<< HEAD
     <!-- Tool Header -->
     <div class="tools">
         <div class="tools-label">Align</div>
@@ -60,8 +59,6 @@
         <div class="tools-button" onclick="surroundRange(11)"><i class="fa fa-underline" aria-hidden="true"></i></div>
     </div>
     
-=======
->>>>>>> aa1e1b45cd236f0ff8de31ef68ff4b19eafff648
     <!-- Left Header -->
     <div class="leader">
         <div class="leader-button-wrap">

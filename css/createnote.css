@@ -19,7 +19,6 @@ a     { text-decoration: none; }
 .header-splitter      { width: 1px; background: #c3c3c3; height: 30px; margin: 10px; }
 .header-avatar        { position: relative; box-shadow: 0 1px 5px #393931cc; width: 48px; height: 48px; margin: 0 10px; border-radius: 50%; background-size: cover; background-position: center }
 
-<<<<<<< HEAD
 /* Tools */
 .tools              { position: fixed; top: 80px; left: 80px; width: calc(100% - 100px); padding: 10px; display: flex; align-content: flex-start; height: 30px; background: #e7e7e7; }
 .tools-label        { font-family: 'Montserrat', sans-serif; font-size: 10px; line-height: 30px; color: #5f5f5f; user-select: none; -moz-user-select: none; margin-right: 5px; } 
@@ -28,8 +27,6 @@ a     { text-decoration: none; }
 .tools-splitter     { width: 1px; height: 24px; background: #a4a4a4; margin: 3px 10px 3px 5px; }
 .color-box          { position: relative; width: 18px; height: 18px; margin: 5px; border: 1px solid #89898980; }
 
-=======
->>>>>>> aa1e1b45cd236f0ff8de31ef68ff4b19eafff648
 /* Leader */
 .leader       { position: fixed; z-index: 9; top: 80px; left: 0px; height: calc(100% - 80px); background: #dedede80; width: 80px; }
 .leader-button-wrap     { position: relative; top: 0px; display: flex; flex-direction: column; align-content: flex-start; font-size: 30px; margin-top: 5px; }
