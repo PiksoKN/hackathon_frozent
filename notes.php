@@ -53,7 +53,7 @@
             <input type="text" oninput="search(this.value)" placeholder="Search..." class="header-search-input" name="wyrazenie">
         </div>
         <div class="header-button-wrap">
-            <div class="header-button"><i class="fa fa-trash-o" aria-hidden="true"></i></div>
+            <div class="header-button" onclick="trashIt()"><i class="fa fa-trash-o" id="trashko" aria-hidden="true"></i></div>
             <div class="header-splitter"></div>
             <div class="header-button-av"><i class="fa fa-cog" aria-hidden="true"></i></div>
             <a href="logout.php"><div class="header-button-av"><i class="fa fa-sign-out" aria-hidden="true"></i></div></a>
@@ -84,6 +84,10 @@
             </a>
         </div>
     </div>
+    
+    <form action="deletThis.php" method="post" id="deleting" style="display: none">
+        <input type="text" name="toDelete" id="deleteForma">
+    </form>
     
     <!-- Content -->
     <div class="content">
@@ -143,7 +147,25 @@
                 document.getElementById("empty").innerHTML=original;
             }
         }
-
+        
+        trashMode = false
+        function trashIt(){
+            trashMode = !trashMode;
+            if(trashMode){
+                document.getElementById("trashko").style.textShadow = "red 0px 0px 5px" 
+                xd = []
+                for(var i=0; i<document.getElementsByClassName("notes").length; i++){
+                    xd.push("<div class='notes' onclick='deletIt("+i+")'>"+document.getElementsByClassName("notes")[i].innerHTML+"</div>")
+                }
+                document.getElementById("empty").innerHTML = xd.join("")
+            } else {
+                document.getElementById("trashko").style.textShadow = "none" 
+            }
+        }
+        function deletIt(x){
+            document.getElementById("deleteForma").value = table[x][2]
+            document.getElementById("deleting").submit();
+        }
     </script>
 
 </html>
