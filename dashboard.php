@@ -64,7 +64,7 @@
                     $quary = "SELECT * FROM note WHERE user_user_id = 1 ORDER BY time DESC LIMIT 6";
                     $result = mysqli_query($mysqli,$quary);
                     while($row = $result->fetch_assoc()){
-                        echo '<div class="notes" onclick="window.location=\'readnote.php?id=' . $row["ref"] . '\'"><div class="note-title">' . $row["title"] . '</div><div class="note-date">' . date("Y-m-d H:i:s", strtotime($row["time"])) . '</div></div>';
+                        echo '<div class="notes" onclick="window.location=\'readnote.php?id=' . $row["ref"] . '\'"><div class="note-title">' . $row["title"] . '</div><div class="note-date">' . date("Y-m-d H:i", strtotime($row["time"])) . '</div></div>';
                     }
                     $quary = "SELECT DISTINCT time FROM note WHERE user_user_id = 1";
                     $result = mysqli_query($mysqli,$quary);
