@@ -63,6 +63,7 @@
     <div class="content">
         <pre class="content-writepanel" id="textForma" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true">New Note</pre>
         <form action="publish.php" method="post" id="forma" style="display: none;">
+            <input type="text" name="title" value="test">
             <input type="text" id="hiden" name="noteText">
         </form>
     </div>

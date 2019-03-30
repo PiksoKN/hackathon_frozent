@@ -32,4 +32,4 @@ a     { text-decoration: none; }
 
 /* Content */
 .content      { position: fixed; top: 80px; left: 80px; width: calc(100% - 80px); height: calc(100% - 80px); }
-.content-writepanel     { font-family: 'Open Sans', sans-serif; padding: 10px; margin: 0; position: absolute; top: 0; left: 0; height: calc(100vh - 100px); width: calc(100vw - 100px); overflow: auto; }
+.content-writepanel     { font-family: 'Open Sans', sans-serif; padding: 10px; margin: 0; position: absolute; top: 0; left: 0; height: calc(100vh - 100px); width: calc(100vw - 100px); white-space: normal; word-wrap: break-word; overflow: auto; }
