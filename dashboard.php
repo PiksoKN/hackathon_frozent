@@ -6,6 +6,8 @@
     <link href="css/dashboard.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="data\font-awesome\css\font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
 </head>
 
 <body>
@@ -54,15 +56,15 @@
             <div class="content-notes">
                 <div class="notes">
                     <div class="note-title">Notatka</div>
-                    <div class="note-date">23.08.19</div>
+                    <div class="note-date">23.08.2019</div>
                 </div>
                 <div class="notes">
                     <div class="note-title">Notatka</div>
-                    <div class="note-date">23.08.19</div>
+                    <div class="note-date">23.08.2019</div>
                 </div>
                 <div class="notes">
                     <div class="note-title">Notatka</div>
-                    <div class="note-date">23.08.19</div>
+                    <div class="note-date">23.08.2019</div>
                 </div>
             </div>
         </div>
