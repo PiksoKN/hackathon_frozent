@@ -26,6 +26,7 @@
         </div>
         <div class="header-button-wrap">
             <div class="header-button"><i class="fa fa-align-left" aria-hidden="true"></i></div>
+            <div class="header-button" onclick="saveWork()"><i class="fa fa-floppy-o" aria-hidden="true"></i></div>
             <div class="header-button"><i class="fa fa-download" aria-hidden="true"></i></div>
             <div class="header-splitter"></div>
             <div class="header-button-av"><i class="fa fa-cog" aria-hidden="true"></i></div>
@@ -60,8 +61,18 @@
     
     <!-- Content -->
     <div class="content">
-        <pre class="content-writepanel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true">New Note</pre>
+        <pre class="content-writepanel" id="textForma" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true">New Note</pre>
+        <form action="publish.php" method="post" id="forma" style="display: none;">
+            <input type="text" id="hiden" name="noteText">
+        </form>
     </div>
+    
+    <script>
+        function saveWork(){
+            document.getElementById("hiden").value = document.getElementById("textForma").innerHTML;
+            document.getElementById("forma").submit(); 
+        }
+    </script>
 </body>
 </html>
 
