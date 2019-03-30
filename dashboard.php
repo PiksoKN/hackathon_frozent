@@ -2,10 +2,10 @@
 <html>
 <head>
     <title>Index</title>
-    <script src="dashboard.js"></script>
+    <script src="js/dashboard.js"></script>
     <link href="css/dashboard.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="data\font-awesome\css\font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
 </head>
 
 <body>
@@ -49,7 +49,30 @@
     
     <!-- Content -->
     <div class="content">
-        
+        <div class="content-column">
+            <div class="content-header">Recent Notes</div>
+            <div class="content-notes">
+                <div class="notes">
+                    <div class="note-title">Notatka</div>
+                    <div class="note-date">23.08.19</div>
+                </div>
+                <div class="notes">
+                    <div class="note-title">Notatka</div>
+                    <div class="note-date">23.08.19</div>
+                </div>
+                <div class="notes">
+                    <div class="note-title">Notatka</div>
+                    <div class="note-date">23.08.19</div>
+                </div>
+            </div>
+        </div>
+        <div class="content-column">
+            <div class="content-header">Calendar</div>
+            <div class="content-miniheader" id="mandday"></div>
+            <div class="content-calendar" id="calendar">
+                <div class="content-calendar-label">Monday</div><div class="content-calendar-label">Tuesday</div><div class="content-calendar-label">Wednesday</div><div class="content-calendar-label">Thursday</div><div class="content-calendar-label">Friday</div><div class="content-calendar-label">Saturday</div><div class="content-calendar-label">Sunday</div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

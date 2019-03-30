@@ -30,4 +30,18 @@ a     { text-decoration: none; }
 .leader-label-arrright  { position: absolute; top: 13px; left: -3px; height: 0; width: 0; border-bottom: 4px solid transparent; border-right: 3px solid rgb(60, 125, 150); }
 
 /* Content */
-.content      { position: fixed; top: 80px; left: 80px; width: calc(100% - 80px); height: calc(100% - 80px); }
+.content         { position: fixed; display: flex; top: 80px; left: 80px; width: calc(100% - 80px); height: calc(100% - 80px); }
+.content-column  { position: relative; padding: 10px; width: 50% }
+.content-header  { position: relative; font-size: 32px; font-weight: 900; color: #303030; padding: 10px; font-family: 'Roboto', sans-serif; }
+.content-card    { position: relative; }
+.content-notes   { position: relative; width: 100%; display: flex; align-content: space-between; flex-wrap: wrap; }
+.notes           { font-family: 'Bitter', serif; flex-grow: 0; flex-shrink: 0; min-width: 200px; max-width: 400px; width: 20vw; height: 120px; border: 2px solid gray; border-radius: 5px; position: relative; margin: 10px 10px 5px; background-image: url(../data/notes.jpg); background-size: cover; }
+.note-title      { position: absolute; top: 15px; left: 10px; font-size: 24px; padding: 0px 0px 0px 10px; }
+.note-date       { position: absolute; bottom: 5px; right: 10px; font-size: 18px; }
+
+/* Calendar */
+.content-miniheader      { position: relative; font-size: 28px; font-weight: 900; color: #235a7d; padding: 10px; font-family: 'Roboto', sans-serif; text-align: center }
+.content-calendar        { width: 100%; text-align: center; }
+.content-calendar-label  { width: 13%; margin: 3px 3px; display: inline-block; height: 30px; text-align: center; font-family: 'Roboto', sans-serif; line-height: 30px; font-size: 16px; border-bottom: 2px solid #284f9e; position: relative; }
+.content-calendar-empty  { width: 13%; margin: 3px 3px; display: inline-block; height: 40px; background: #e1e1e1; color: #e1e1e1; border-radius: 3px; font-family: 'Roboto', sans-serif; line-height: 40px; font-size: 12px; text-align: center; position: relative }
+.content-calendar-box    { width: 13%; margin: 3px 3px; display: inline-block; height: 40px; background: #94c6da; font-family: 'Roboto', sans-serif; line-height: 40px; font-size: 12px; text-align: center; color: #141a56; border-radius: 3px; position: relative }
