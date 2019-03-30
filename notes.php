@@ -51,7 +51,8 @@
             <div class="header-caption">All Notes</div>
             <div class="header-splitter"></div>
             <i class='fa fa-search header-search-icon' aria-hidden='true'></i>
-            <input type="text" oninput="" placeholder="Search..." class="header-search-input" name="wyrazenie">
+            <input type="text" oninput="search(this.value)" placeholder="Search..." class="header-search-input" name="wyrazenie">
+
         </div>
         <div class="header-button-wrap">
             <div class="header-button"><i class="fa fa-files-o" aria-hidden="true"></i></div>
@@ -88,23 +89,50 @@
     
     <!-- Content -->
     <div class="content">
-            <div class="content-notes">
+            <div class="content-notes" id="empty">
                 
             <?php
 
 
             $id=1;
             $ile_danych = $mysqli->query("SELECT title, time FROM note where user_user_id = " . mysqli_real_escape_string($mysqli,$id));
+            $tabelka = Array();
             while( $notatka = mysqli_fetch_array($ile_danych)){
                 echo '<div class="notes">
                 <div class="note-title">' . $notatka['title'] . '</div>';
                 echo '<div class="note-date">' . date("Y-m-d H:i:s", strtotime($notatka['time'])) . '</div>
                 </div>';
+                $tabelka2 = Array();
+                array_push($tabelka2,$notatka['title'],date("Y-m-d H:i:s", strtotime($notatka['time'])));
+                array_push($tabelka,$tabelka2);
             }
+            
             ?>
             
             </div>
        
     </div>
 </body>
+    <script>
+        table=<?php echo json_encode($tabelka);?>;
+        original=document.getElementById("empty").innerHTML;
+        function search(x){
+            if(x!=""){
+            document.getElementById("empty").innerHTML="";
+            for(var i=0;i<table.length;i++){
+                if(table[i][0].toLowerCase().indexOf(x.toLowerCase())!=-1){
+                    ser = document.createElement("div");
+                    ser.className = "notes"
+                    ser.innerHTML = "<div class='note-title'>" + table[i][0] + "</div><div class='note-date'>"+table[i][1]+"</div>"
+                    document.getElementById("empty").appendChild(ser)
+                }
+            }
+            }
+            else{
+                document.getElementById("empty").innerHTML=original;
+            }
+        }
+
+    </script>
+
 </html>
