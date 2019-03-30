@@ -1,15 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Index</title>
-    <script src="dashboard.js"></script>
-    <link href="css/createnote.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="data\font-awesome\css\font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-</head>
-
 <?php
     require("connect.php");
     $opened = file_get_contents("notes/" . $_GET["id"] . ".txt");
@@ -19,6 +7,18 @@
         $title = $row["title"];
     }
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title><?php echo $title; ?></title>
+    <script src="dashboard.js"></script>
+    <link href="css/createnote.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="data\font-awesome\css\font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
 
 <body>
     <!-- Logo -->

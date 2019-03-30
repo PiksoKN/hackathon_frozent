@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Index</title>
+    <title>Create note</title>
     <link href="css/createnote.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="data\font-awesome\css\font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet"> 
@@ -23,12 +23,11 @@
         <div class="header-splitter"></div>
         </div>
         <div class="header-button-wrap">
-            <div class="header-button"><i class="fa fa-align-left" aria-hidden="true"></i></div>
             <div class="header-button" onclick="saveWork()"><i class="fa fa-floppy-o" aria-hidden="true"></i></div>
             <div class="header-splitter"></div>
             <div class="header-button-av"><i class="fa fa-cog" aria-hidden="true"></i></div>
             <a href="logout.php"><div class="header-button-av"><i class="fa fa-sign-out" aria-hidden="true"></i></div></a>
-            <div class="header-avatar" style="background-image: url(../data/user.png)"></div>
+            <div class="header-avatar" style="background-image: url(data/user.png)"></div>
         </div>
     </div>
     
@@ -165,6 +164,27 @@
                     case 8:
                         var el = document.createElement("span");
                         el.style.fontSize = y + "px";
+                        if (range.canSurroundContents(el)) {
+                            range.surroundContents(el);
+                        } 
+                        break;
+                    case 9:
+                        var el = document.createElement("span");
+                        el.style.fontWeight = "bold";
+                        if (range.canSurroundContents(el)) {
+                            range.surroundContents(el);
+                        } 
+                        break;
+                    case 10:
+                        var el = document.createElement("span");
+                        el.style.fontStyle = "italic";
+                        if (range.canSurroundContents(el)) {
+                            range.surroundContents(el);
+                        } 
+                        break;
+                    case 11:
+                        var el = document.createElement("span");
+                        el.style.textDecoration= "underline";
                         if (range.canSurroundContents(el)) {
                             range.surroundContents(el);
                         } 
